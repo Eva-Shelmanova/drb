@@ -106,8 +106,15 @@ a third pass over the remaining 18 recovered 8, and two further passes over the
 last 10 recovered 8 more. Final state: **159 of 161 hardened, all 161
 neutralised**, for about $0.31 total. The authoritative workbook is
 `out/final_hardened_20260727T105202Z.xlsx`, published as
-`../benchmark_extraction/final_v2_hardened.xlsx`. `final.xlsx` is never written
-to; the scored runs in `benchmark_test/` still correspond to it.
+`../benchmark_extraction/final_v2_hardened.xlsx`.
+
+The hardening pass never writes to `final.xlsx`. One separate, deterministic fix
+did edit it: `strip_source_scope.py` removed a sentence naming the internal
+`source_scope` column from both prompt columns of both task sets. The scored runs
+in `benchmark_test/` were made without that sentence, so the committed v1 could
+not previously reproduce them. Pass `--verify-against <run>.jsonl` to re-prove
+the fix; it checks the stripped prompts against the prompts each run actually
+sent, and all 161 match exactly for all four scored runs.
 
 Two things made the late passes work, and both are worth keeping. `--retry-from`
 feeds each row its own prior rejection reasons back into the prompt, which stops

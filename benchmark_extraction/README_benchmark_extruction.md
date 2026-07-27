@@ -13,6 +13,12 @@ This repository contains the final benchmark package built from Core and Set sou
   changed. The scored runs in `benchmark_test/` were made against `final.xlsx`,
   not this file.
 
+Both files have the `Use \`source_scope\` only to locate...` sentence removed from
+`final_prompt_text` and `final_prompt_text_ru`. It named a column the benchmarked
+model never receives, and it suppressed answers. The scored runs were produced
+without it; the committed prompts now match those runs exactly, verified against
+the stored run records by `../task_update/strip_source_scope.py`.
+
 ## Criteria And Plan
 
 - `Benchmark Plan.pdf` - full benchmark design document.
