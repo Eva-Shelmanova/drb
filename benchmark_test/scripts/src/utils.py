@@ -33,6 +33,13 @@ def write_csv(path: Path, rows: Iterable[dict[str, Any]]) -> None:
         writer.writerows(rows_list)
 
 
+def _as_cell(value: Any) -> Any:
+    """openpyxl rejects dicts and lists, which token_usage and raw_response_json are."""
+    if isinstance(value, (dict, list)):
+        return json.dumps(value, ensure_ascii=False)
+    return value
+
+
 def write_xlsx(path: Path, rows: Iterable[dict[str, Any]], sheet_name: str = "results") -> None:
     rows_list = list(rows)
     workbook = openpyxl.Workbook()
@@ -43,7 +50,7 @@ def write_xlsx(path: Path, rows: Iterable[dict[str, Any]], sheet_name: str = "re
         headers = list(rows_list[0].keys())
         worksheet.append(headers)
         for row in rows_list:
-            worksheet.append([row.get(column, "") for column in headers])
+            worksheet.append([_as_cell(row.get(column, "")) for column in headers])
 
     workbook.save(path)
     workbook.close()
