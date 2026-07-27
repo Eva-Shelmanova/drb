@@ -1,0 +1,14 @@
+# Secrets. OPENROUTER_API_KEY is read from the environment, never from a file
+# in the tree, but keep the usual dotenv names out of git regardless.
+.env
+.env.*
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS
+.DS_Store

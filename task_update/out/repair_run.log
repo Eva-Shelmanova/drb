@@ -1,0 +1,36 @@
+/Users/evashelmanova/Documents/IAI MSU/materials/sources_extracted/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+retrying 62 of 62 previously failed rows
+model=deepseek/deepseek-v4-flash rows=62 workers=8
+artifacts -> /Users/evashelmanova/Documents/IAI MSU/experiments/drb_new_clone/task_update/out
+  [1/62] Core-batch2-task10-CORE-POL-38: reject
+  [2/62] Core-batch3-task2-CORE-SCI-11: reject
+  [3/62] Core-batch3-task4-CORE-POL-01: flag
+  [4/62] Core-batch2-task6-CORE-ECON-13: ok
+  [5/62] Core-batch3-task9-CORE-POL-29: flag
+  [6/62] Core-batch1-task1-CORE-POL-01: ok
+  [7/62] Core-batch2-task1-CORE-POL-39: ok
+  [8/62] Core-batch2-task9-CORE-TECH-16: ok
+  [9/62] Core-batch3-task6-CORE-POL-12: ok
+  [10/62] Core-batch3-task1-CORE-POL-41: ok
+  [11/62] Core-batch4-task2-CORE-ECON-06: flag
+  [12/62] Core-batch4-task4-CORE-SCI-09: flag
+  [13/62] Core-batch4-task7-CORE-POL-06: reject
+  [14/62] Core-batch5-task6-CORE-POL-05: reject
+  [15/62] Core-batch4-task6-CORE-ECON-11: flag
+  [16/62] Core-batch5-task15-CORE-ECON-20: reject
+  [17/62] Core-batch5-task12-CORE-POL-13: ok
+  [18/62] Core-batch5-task1-CORE-ECON-12: flag
+  [19/62] Core-batch4-task11-CORE-POL-03: ok
+  [20/62] Core-batch6-task2-BND-CORE-PAIR-019: reject
+  [21/62] Core-batch6-task1-BND-CORE-PAIR-054: reject
+  [22/62] Core-batch5-task14-BND-CORE-PAIR-006: reject
+  [23/62] Core-batch6-task12-CORE-POL-26: flag
+  [24/62] Core-batch7-task7-BND-CORE-PAIR-010: reject
+  [25/62] Core-batch7-task11-CORE-POL-18: reject
+  [26/62] Core-batch6-task6-BND-CORE-PAIR-046: flag
+  [27/62] Core-batch5-task16-CORE-SCI-04: flag
+  [28/62] Core-batch1-task2-CORE-TECH-05: ok
+  [29/62] Core-batch8-task2-CORE-GEN-06: reject
+  [30/62] Core-batch7-task2-BND-CORE-PAIR-023: ok
+  [31/62] Core-batch7-task15-BND-CORE-PAIR-025: flag

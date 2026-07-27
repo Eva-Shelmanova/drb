@@ -7,6 +7,11 @@ This repository contains the final benchmark package built from Core and Set sou
 - `final.xlsx` - final two-sheet benchmark table:
   - `Core`: Core tasks with English and Russian prompt/rubric columns.
   - `Set`: Set tasks with English and Russian prompt/gold-set columns.
+- `final_v2_hardened.xlsx` - same schema and same 161 tasks, with one extra
+  boundary distinction per task and the `Methodological trap:` label removed from
+  every prompt. Produced by `../task_update/`; see the root README for what
+  changed. The scored runs in `benchmark_test/` were made against `final.xlsx`,
+  not this file.
 
 ## Criteria And Plan
 
